@@ -46,6 +46,8 @@ let data = [];
             <p class="cita-hora"><b>hora:</b>${item.hora}</p>
             <p class="cita-sintomas"><b>sintomas:</b>${item.sintomas}</p>
             <button class="eliminar-cita" onclick="eliminarCita(${i})">Eliminar</button>
+            <button onclick="editarCita(${i})">Editar</button>
+           
            
           </div>
         `;
@@ -60,7 +62,19 @@ let data = [];
   }
     }
 
- 
+   function editarCita(index) {
+      const cita = data[index];
+      document.getElementById("tipo-mascota").value = cita.tipoMascota;
+      document.getElementById("nombre-mascota").value = cita.nombreMascota;
+      document.getElementById("propietario").value = cita.propietario;
+      document.getElementById("telefono").value = cita.telefono;
+      document.getElementById("fecha").value = cita.fecha;
+      document.getElementById("hora").value = cita.hora;
+      document.getElementById("sintomas").value = cita.sintomas;
+
+      data.splice(index, 1);
+      createProducts();
+  }
 
 
     function eliminarCita(index) {
