@@ -90,3 +90,72 @@ let data = [];
   document.getElementById("hora").value = "";
   document.getElementById("sintomas").value = "";
 }
+function validar(){
+  
+  if(!document.getElementById("tipo-mascota").value){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent="Por favor digite el tipo de mascota"
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")     
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+}else if(!document.getElementById("nombre-mascota").value){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent="Por favor digite el nombre de la mascota"
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+} else if(!document.getElementById("propietario").value){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent="Por favor digite su nombre"
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+
+  }else  if(document.getElementById("telefono").value.length < 10){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent=" el numero debe ser mayor a 9 caracteres"
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+
+
+  } else if(!document.getElementById("fecha").value){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent="Por favor digite la fecha"
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+
+  } else if(!document.getElementById("hora").value){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent="Por favor digite la hora"
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+
+  } else if(!document.getElementById("sintomas").value){
+    document.getElementById("alert2").setAttribute("style", "display:block !important")
+    document.getElementById("mensaje2").textContent="Por favor digite los sintomas "
+    setTimeout(() => {
+        document.getElementById("alert2").setAttribute("style", "display:none !important")
+        document.getElementById("mensaje2").textContent=""
+    }, 3000);
+
+}else{
+  crear()
+  document.getElementById("alerta").setAttribute("style", "display:block !important")
+  document.getElementById("mensaje").textContent="REGISTRO EXITOSO"
+  setTimeout(() => {
+      document.getElementById("alerta").setAttribute("style", "display:none !important")
+      document.getElementById("mensaje").textContent=""
+  }, 4000);
+}
+}
+
+  
