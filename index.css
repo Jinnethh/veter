@@ -62,7 +62,7 @@ width: 70%;
  align-items: center;
     font-size: 50px;
     background-repeat: no-repeat;
-   background-color: #acba9d;
+   background-color: #8fbdd3;
     background-size: 300px auto;
     display: flex;
     justify-content: center;
@@ -136,6 +136,7 @@ button{
   
 
 }
+
 .pilas{
   background-color:#ede6db;
   box-shadow: 0 0 20px #8fbdd3;
@@ -173,4 +174,3 @@ button{
   font-family: "Noteworthy Light";
   font-weight:  bold
 }
-
